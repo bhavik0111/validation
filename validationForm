@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP ASSIGNMENT</title>
+    <script>
+        // alert('Onclick');
+
+        function myfun()
+        {
+            var error = false;
+            document.getElementById("valid_username").innerHTML = "";
+            document.getElementById("valid_password").innerHTML = "";
+
+            var username = document.getElementById("username").value;
+
+            var password = document.getElementById("password").value;
+            var first_name = document.getElementById("fname").value;
+            var middle_name = document.getElementById("mname").value;
+            var last_name = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            var phone_no = document.getElementById("number").value;
+            var address = document.getElementById("address").value;
+
+            console.log(password=="");
+            if(username=="")
+            {
+                document.getElementById("valid_username").innerHTML = "Please Enter Username";
+                error = true;
+            }
+            
+            if(password=="")
+            {
+                document.getElementById("valid_password").innerHTML = "Please Enter Password";
+                error = true;
+
+            }
+           
+
+            /*if(fname=="")
+            {
+                document.getElementById("valid_fname").innerHTML = "Please Enter First_name";
+                valid = false;
+
+            }
+            else
+            {
+                document.getElementById("valid_fname").innerHTML = "";
+            }
+
+            if(mname=="")
+            {
+                document.getElementById("valid_mname").innerHTML = "Please Enter Middle_name";
+                valid = false;
+
+            }
+            else
+            {
+                document.getElementById("valid_mname").innerHTML = "";
+            }
+
+            if(lname=="")
+            {
+                document.getElementById("valid_lname").innerHTML = "Please Enter Last_name";
+                valid = false;
+
+            }
+            else
+            {
+                document.getElementById("valid_lname").innerHTML = "";
+            }
+
+            if(email=="")
+            {
+                document.getElementById("valid_email").innerHTML = "Please Enter Email";
+                valid = false;
+
+            }
+            else
+            {
+                document.getElementById("valid_lname").innerHTML = "";
+            }
+
+            if(number=="")
+            {
+                document.getElementById("valid_number").innerHTML = "Please Enter Phone_no";
+                valid = false;
+
+            }
+            else
+            {
+                document.getElementById("valid_number").innerHTML = "";
+            }
+
+            if(address=="")
+            {
+                document.getElementById("valid_address").innerHTML = "Please Enter Address";
+                valid = false;
+
+            }
+            else
+            {
+                document.getElementById("valid_address").innerHTML = "";
+            }
+
+            if(country=="")
+            {
+                document.getElementById("valid_country").innerHTML = "Please select Country";
+                return false;
+
+            }
+            else
+            {
+                document.getElementById("valid_country").innerHTML = "";
+            }*/
+            if(error == true){
+                return false;
+            }else{
+                return true;
+            }
+
+        }
+
+
+    </script>
+</head>
+    <body>
+    
+        <form method="POST" >
+          <table border="1" align="center" cellpadding="5" cellspacing="0">
+            <tr>
+                <th colspan="2"><h2>Registration</h2></th>
+
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td><input type="text" name="username"  id="username" placeholder="Enter Username..."><div id = "valid_username"></div></td> 
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="password" id="password" placeholder="Enter Password...">
+                <div id= "valid_password"></div></td>
+            </tr>
+            <tr>
+                <th>First_name</th>
+                <td><input type="text" name="fname"  id="fname" placeholder="Enter First_name..."><div id = "valid_fname"></div></td>
+            </tr>
+            <tr>
+                <th>Middle_name</th>
+                <td><input type="text" name="mname" id="mname" placeholder="Enter Middle_name..."><div id = "valid_mname"></div></td>
+            </tr>
+            <tr>
+                <th>Last_name</th>
+                <td><input type="text" name="lname"  id="lname" placeholder="Enter Last_name..."><div id = "valid_lname"></div></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email"  id="email" placeholder="Enter Email..."><div id = "valid_email"></div></td>
+            </tr>
+            <tr>
+                <th>Phone_no</th>
+                <td><input type="number" name="number" id="number" placeholder="Enter Phone no..."><div id = "valid_number"></div></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><textarea name="address" id="address" placeholder="Enter Address..."></textarea><div id = "valid_address"></div></td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td><select name="country">
+                    <option value="0">--select--</option>
+                    <option value="India">India</option>
+                    <option value="Srilanka">Srilanka</option>
+                    <option value="UAE">UAE</option>
+                    <option value="America">America</option>
+                </td>
+            </tr>
+            <tr>
+                <th>Interest</th>
+                <td><input type="checkbox" name="interest[]" value="news">News
+                    <input type="checkbox" name="interest[]" value="health">Health
+                    <input type="checkbox" name="interest[]" value="automobile">Automobile
+                    <input type="checkbox" name="interest[]" value="internet">Internet
+                </td>
+            </tr>
+            <tr>
+                <!-- <td colspan="2" align="center"><button onclick = "myfun()">submit</button> -->
+                    <td colspan="2" align="center"><input type="submit" name="submit"  onclick="return myfun();">
+                <input type="reset" name="Cancel" value="Cancel"></td>
+            </tr>
+          </table>
+        </form>
+    </body>
+</html>
+
